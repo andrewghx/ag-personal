@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import laptopSvg from '../config/svg/laptopSvg'
+import laptopSvg from '~/config/svg/laptopSvg'
 
 interface Props {
   inline?: boolean

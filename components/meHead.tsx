@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import meHead from '../config/svg/meHead'
+import meHead from '~/config/svg/meHead'
 
 interface Props {
   inline?: boolean,

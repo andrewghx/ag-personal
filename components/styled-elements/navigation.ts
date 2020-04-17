@@ -1,7 +1,7 @@
 import styled, { ThemeProps } from 'styled-components'
-import Logo from '../logo'
-import Anchor from './anchor'
-import navConfig from '../../config/navigation/navSettings'
+import Logo from '~/components/logo'
+import Anchor from '~/components/styled-elements/anchor'
+import navConfig from '~/config/navigation/navSettings'
 const { hamburgerSize, hamburgerReductionFactor, hamburgerPositionFromBottom, mobileMenuWidth, navMobileTransition, desktopMenuHeight } = navConfig
 
 interface Props extends ThemeProps<any> {

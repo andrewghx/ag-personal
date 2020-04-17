@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
-import { Offset, Hamburger, NavLink, NavItem, NavLinks, NavLogo, MobileLogo, NavOuter } from './styled-elements/navigation'
-import navLinks from '../config/navigation/navLinks'
-
+import { Offset, Hamburger, NavLink, NavItem, NavLinks, NavLogo, MobileLogo, NavOuter } from '~/components/styled-elements/navigation'
+import navLinks from '~/config/navigation/navLinks'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faTimes, faBars } from '@fortawesome/free-solid-svg-icons'
 

@@ -1,8 +1,8 @@
 import React from 'react'
 import styled, { ThemeProps } from 'styled-components'
-import Laptop from './laptop'
-import Me from './me'
-import titleSettings from '../config/title/titleSettings'
+import Laptop from '~/components/laptop'
+import Me from '~/components/me'
+import titleSettings from '~/config/title/titleSettings'
 
 const { 
   height, 

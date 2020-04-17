@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
-import theme from '../config/theme'
-import logo from '../config/svg/logoSvg'
+import theme from '~/config/theme'
+import logo from '~/config/svg/logoSvg'
 
 interface Props {
   inline?: boolean,
