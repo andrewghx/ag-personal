@@ -8,8 +8,8 @@ interface Props {
   monotone?: boolean
 }
 
-const MeHeadDiv = styled.div`
-  display: ${(props: Props) => props.inline ? 'inline' : 'block'};
+const MeHeadDiv = styled.div<Props>`
+  display: ${props => props.inline ? 'inline' : 'block'};
   width: 100%;
 `
 

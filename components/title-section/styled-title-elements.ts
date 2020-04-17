@@ -1,8 +1,11 @@
-import React from 'react'
 import styled, { ThemeProps } from 'styled-components'
-import Laptop from '~/components/laptop'
-import Me from '~/components/me'
-import titleSettings from '~/config/title/titleSettings'
+import Laptop from '~/components/graphical-components/laptop'
+import Me from '~/components/graphical-components/me'
+import cssSettings from '~/config/title/cssSettings'
+
+interface Props extends ThemeProps<any>  {
+  smaller?: boolean
+}
 
 const { 
   height, 
@@ -18,11 +21,7 @@ const {
   laptopFromTop,
   lineFromTop,
   lineHeight
-} = titleSettings
-
-interface Props extends ThemeProps<any>  {
-  smaller?: boolean
-}
+} = cssSettings
 
 const TitleContainer = styled.div<Props>`
   position: relative;
@@ -147,16 +146,4 @@ const BackgroundText = styled.span<Props>`
   }
 `
 
-const Title: React.FC<Props> = props => {
-  return (
-    <TitleContainer {...props}>
-      <BackgroundText {...props}>_dev.andrew()</BackgroundText>
-      <TitleLaptop {...props} />
-      <TitleMe {...props} />
-      <TitleText {...props}>Text text text text</TitleText>
-      <Line {...props} />
-    </TitleContainer>
-  )
-}
-
-export default Title
+export { BackgroundText, Line, TitleText, TitleMe, TitleLaptop, TitleContainer }

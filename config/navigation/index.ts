@@ -4,7 +4,11 @@ const config = {
   hamburgerPositionFromBottom: 2.6, // rem
   desktopMenuHeight: 3, // rem
   mobileMenuWidth: 80, // %
-  navMobileTransition: 400 // ms
+  navMobileTransition: 400, // ms
+  logo: {
+    color: '',  
+    mobileColor: '#ffffff'
+  }
 }
 
 export default config

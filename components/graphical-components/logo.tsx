@@ -8,13 +8,13 @@ interface Props {
   color?: string
 }
 
-const LogoDiv = styled.div`
-  display: ${(props: Props) => props.inline ? 'inline' : 'block'};
+const LogoDiv = styled.div<Props>`
+  display: ${props => props.inline ? 'inline' : 'block'};
   width: 100%;
 `
 
 const Logo: React.FC<Props> = props => {
-  const replacedSVG = logo.replace(/{COLOR}/g, props.color || theme.primary)
+  const replacedSVG = logo.replace(/{COLOR}/g, props.color || theme.colors.primary)
   return <LogoDiv {...props} dangerouslySetInnerHTML={{ __html: replacedSVG }} />
 }
 

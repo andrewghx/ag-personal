@@ -1,7 +1,7 @@
 import styled, { ThemeProps } from 'styled-components'
-import Logo from '~/components/logo'
-import Anchor from '~/components/styled-elements/anchor'
-import navConfig from '~/config/navigation/navSettings'
+import Logo from '~/components/graphical-components/logo'
+import Anchor from '~/components/common-styled-elements/anchor'
+import navConfig from '~/config/navigation'
 const { hamburgerSize, hamburgerReductionFactor, hamburgerPositionFromBottom, mobileMenuWidth, navMobileTransition, desktopMenuHeight } = navConfig
 
 interface Props extends ThemeProps<any> {
@@ -92,12 +92,12 @@ const NavLink = styled(Anchor)`
     &:hover {
       color: ${props => props.theme.colors.light};
     }
-    i {
+    svg {
       padding-right: 1rem;
     }
   }
   @media (min-width: ${props => props.theme.breakpoints.smMin}) {
-    i {
+    svg {
       display: none;
     }
     span {

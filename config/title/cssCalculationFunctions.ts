@@ -1,4 +1,4 @@
-import { CSSProperties } from './titleSettings'
+import { CSSProperties } from './cssSettings'
 
 type CustomFunction = (values: object) => number
 
@@ -11,4 +11,3 @@ export const createVariable = (values: object, func: CustomFunction): CSSPropert
 }
 
 export const createProperty = (customSettings: CSSProperties): CSSProperties => Object.assign({}, { unit: 'px' }, customSettings)
-

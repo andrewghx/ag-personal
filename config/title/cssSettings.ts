@@ -1,4 +1,4 @@
-import { createProperty, createVariable } from './titleSettingsFunctions'
+import { createProperty, createVariable } from './cssCalculationFunctions'
 
 export interface CSSProperties {
   smaller?: number
