@@ -30,23 +30,23 @@ const TitleContainer = styled.div<Props>`
   height: ${props => props.smaller ? `${height.smaller}${height.unit}` : `${height.xs}${height.unit}`};
   overflow: hidden;
   @media (min-width: ${props => props.theme.breakpoints.smMin}) {
-    height: ${props => props.smaller ? `${height.smaller * 1.1}${height.unit}` : `${height.default}${height.unit}`};
+    height: ${props => props.smaller ? `${height.smaller || 0 * 1.1}${height.unit}` : `${height.default}${height.unit}`};
   }
 `
 
 const TitleLaptop = styled(Laptop)<Props>`
-  width: ${props => props.smaller ? `${laptopWidth.smaller}${laptopWidth.unit}` : `${laptopWidth.xs * 0.5}${laptopWidth.unit}`};
+  width: ${props => props.smaller ? `${laptopWidth.smaller}${laptopWidth.unit}` : `${laptopWidth.xs || 0 * 0.5}${laptopWidth.unit}`};
   display: inline-block;
   position: absolute;
-  left: ${props => props.smaller ? `calc(50% - ${laptopWidth.smaller / 2}${laptopFromTop.unit})` : `35%` };
-  top: ${props => props.smaller ? `${laptopFromTop.smaller}${laptopFromTop.unit}` : `${laptopFromTop.default * 4.5}${laptopFromTop.unit}`};
+  left: ${props => props.smaller ? `calc(50% - ${laptopWidth.smaller || 0 / 2}${laptopFromTop.unit})` : `35%` };
+  top: ${props => props.smaller ? `${laptopFromTop.smaller}${laptopFromTop.unit}` : `${laptopFromTop.default || 0 * 4.5}${laptopFromTop.unit}`};
   @media (min-width: ${props => props.theme.breakpoints.smMin}) {
-    left: ${props => props.smaller ? `calc(100% - ${laptopWidth.smaller + laptopFromRight.smaller}${laptopFromRight.unit})` : `25%` };
-    width: ${props => props.smaller ? `${laptopWidth.smaller}${laptopWidth.unit}` : `${laptopWidth.sm * 0.9}${laptopWidth.unit}`};
-    top: ${props => props.smaller ? `${laptopFromTop.default}${laptopFromTop.unit}` : `${laptopFromTop.sm * 4.5}${laptopFromTop.unit}`};
+    left: ${props => props.smaller ? `calc(100% - ${laptopWidth.smaller || 0 + (laptopFromRight.smaller || 0)}${laptopFromRight.unit})` : `25%` };
+    width: ${props => props.smaller ? `${laptopWidth.smaller}${laptopWidth.unit}` : `${laptopWidth.sm || 0 * 0.9}${laptopWidth.unit}`};
+    top: ${props => props.smaller ? `${laptopFromTop.default}${laptopFromTop.unit}` : `${laptopFromTop.sm || 0 * 4.5}${laptopFromTop.unit}`};
   }
   @media (min-width: ${props => props.theme.breakpoints.mdMin}) {
-    left: ${props => props.smaller ? `calc(100% - ${laptopWidth.smaller + laptopFromRight.smaller}${laptopFromRight.unit})` : `calc(100% - ${laptopWidth.default + laptopFromRight.default}${laptopFromRight.unit})` };
+    left: ${props => props.smaller ? `calc(100% - ${laptopWidth.smaller || 0 + (laptopFromRight.smaller || 0)}${laptopFromRight.unit})` : `calc(100% - ${laptopWidth.default || 0 + (laptopFromRight.default || 0)}${laptopFromRight.unit})` };
     width: ${props => props.smaller ? `${laptopWidth.smaller}${laptopWidth.unit}` : `${laptopWidth.default}${laptopWidth.unit}`};
     top: ${`${laptopFromTop.default}${laptopFromTop.unit}`};
   }
@@ -76,28 +76,28 @@ const TitleText = styled.span<Props>`
   color: ${props => props.theme.colors.light};
   position: absolute;
   font-size: ${`${titleTextSize.xs}${titleTextSize.unit}`};
-  top: ${props => props.smaller ? `${(height.smaller / 2)}${titleTextFromTop.unit}` : `${titleTextFromTop.xs}${titleTextFromTop.unit}`};
-  left: ${props => props.smaller ? '0px' : `${titleTextFromLeft.xs * 1.05}${titleTextFromLeft.unit}`};
+  top: ${props => props.smaller ? `${(height.smaller || 0 / 2)}${titleTextFromTop.unit}` : `${titleTextFromTop.xs}${titleTextFromTop.unit}`};
+  left: ${props => props.smaller ? '0px' : `${titleTextFromLeft.xs || 0 * 1.05}${titleTextFromLeft.unit}`};
   text-shadow: 1px 2px 4px ${props => props.theme.boxShadowColor};
   @media (min-width: ${props => props.theme.breakpoints.smMin}) {
     font-size: ${`${titleTextSize.sm}${titleTextSize.unit}`};
-    top: ${props => props.smaller ? `${(height.smaller * 1.1 / 2) - (titleTextSize.sm * 0.75 / 2)}${titleTextFromTop.unit}` : `${titleTextFromTop.sm * 1.2}${titleTextFromTop.unit}`};
-    left: ${props => props.smaller ? '0px' : `${titleTextFromLeft.sm * 1.2}${titleTextFromLeft.unit}`};
+    top: ${props => props.smaller ? `${(height.smaller || 0 * 1.1 / 2) - (titleTextSize.sm || 0 * 0.75 / 2)}${titleTextFromTop.unit}` : `${titleTextFromTop.sm || 0 * 1.2}${titleTextFromTop.unit}`};
+    left: ${props => props.smaller ? '0px' : `${titleTextFromLeft.sm || 0 * 1.2}${titleTextFromLeft.unit}`};
   }
   @media (min-width: ${props => props.theme.breakpoints.mdMin}) {
     font-size: ${`${titleTextSize.md}${titleTextSize.unit}`};
-    top: ${props => props.smaller ? `${(height.smaller * 1.1 / 2) - (titleTextSize.md * 0.75 / 2)}${titleTextFromTop.unit}` : `${titleTextFromTop.md}${titleTextFromTop.unit}`};
+    top: ${props => props.smaller ? `${(height.smaller || 0 * 1.1 / 2) - (titleTextSize.md || 0 * 0.75 / 2)}${titleTextFromTop.unit}` : `${titleTextFromTop.md}${titleTextFromTop.unit}`};
     left: ${props => props.smaller ? '0px' : `${titleTextFromLeft.md}${titleTextFromLeft.unit}`};
   }
   @media (min-width: ${props => props.theme.breakpoints.lgMin}) {
     font-size: ${`${titleTextSize.lg}${titleTextSize.unit}`};
-    top: ${props => props.smaller ? `${(height.smaller * 1.1 / 2) - (titleTextSize.lg * 0.75 / 2)}${titleTextFromTop.unit}` : `${titleTextFromTop.lg}${titleTextFromTop.unit}`};
-    left: ${props => props.smaller ? '0px' : `${titleTextFromLeft.lg * 1.1}${titleTextFromLeft.unit}`};
+    top: ${props => props.smaller ? `${(height.smaller || 0 * 1.1 / 2) - (titleTextSize.lg || 0 * 0.75 / 2)}${titleTextFromTop.unit}` : `${titleTextFromTop.lg}${titleTextFromTop.unit}`};
+    left: ${props => props.smaller ? '0px' : `${titleTextFromLeft.lg || 0 * 1.1}${titleTextFromLeft.unit}`};
   }
   @media (min-width: ${props => props.theme.breakpoints.xlMin}) {
     font-size: ${`${titleTextSize.xl}${titleTextSize.unit}`};
-    top: ${props => props.smaller ? `${(height.smaller * 1.1 / 2) - (titleTextSize.xl * 0.75 / 2)}${titleTextFromTop.unit}` : `${titleTextFromTop.xl}${titleTextFromTop.unit}`};
-    left: ${props => props.smaller ? '0px' : `${titleTextFromLeft.xl * 1.2}${titleTextFromLeft.unit}`};
+    top: ${props => props.smaller ? `${(height.smaller || 0 * 1.1 / 2) - (titleTextSize.xl || 0 * 0.75 / 2)}${titleTextFromTop.unit}` : `${titleTextFromTop.xl}${titleTextFromTop.unit}`};
+    left: ${props => props.smaller ? '0px' : `${titleTextFromLeft.xl || 0 * 1.2}${titleTextFromLeft.unit}`};
   }
 `
 
@@ -122,11 +122,11 @@ const Line = styled.hr`
   }
   @media (min-width: ${props => props.theme.breakpoints.lgMin}) {
     top: ${`${lineFromTop.lg}${lineFromTop.unit}`};
-    left: ${`${titleTextFromLeft.lg * 1.1}${titleTextFromLeft.unit}`};
+    left: ${`${titleTextFromLeft.lg || 0 * 1.1}${titleTextFromLeft.unit}`};
   }
   @media (min-width: ${props => props.theme.breakpoints.xlMin}) {
     top: ${`${lineFromTop.xl}${lineFromTop.unit}`};
-    left: ${`${titleTextFromLeft.xl * 1.2}${titleTextFromLeft.unit}`};
+    left: ${`${titleTextFromLeft.xl || 0 * 1.2}${titleTextFromLeft.unit}`};
   }
 `
 
@@ -137,12 +137,12 @@ const BackgroundText = styled.span<Props>`
   padding: 0px;
   color: ${props => props.theme.colors.light};
   position: absolute;
-  right: ${`-${bgTextSize.default * 0.189}px`};
-  top: ${`${(height.default / 2) - (bgTextSize.default / 1.8)}px`};
+  right: ${`-${bgTextSize.default || 0 * 0.189}px`};
+  top: ${`${(height.default || 0 / 2) - (bgTextSize.default || 0 / 1.8)}px`};
   opacity: 0.1;
   @media (min-width: ${props => props.theme.breakpoints.smMin}) {
     font-size: ${`${bgTextSize.default}${bgTextSize.unit}`};
-    font-size: ${props => props.smaller ? `${bgTextSize.smaller * 1.1}${bgTextSize.unit}` : `${bgTextSize.default}${bgTextSize.unit}`};
+    font-size: ${props => props.smaller ? `${bgTextSize.smaller || 0 * 1.1}${bgTextSize.unit}` : `${bgTextSize.default}${bgTextSize.unit}`};
   }
 `
 

@@ -1,8 +1,6 @@
-import { CSSProperties } from './cssSettings'
+import { CSSProperties, CustomFunction, CustomFunctionValues } from './cssSettings'
 
-type CustomFunction = (values: object) => number
-
-export const createVariable = (values: object, func: CustomFunction): CSSProperties => {
+export const createVariable = (values: CustomFunctionValues, func: CustomFunction): CSSProperties => {
   const variable = { } as CSSProperties
   const screenSizes = ['xs', 'sm', 'md', 'lg', 'xl', 'default', 'smaller']
   for (let screenSize of screenSizes) variable[screenSize] = func({ ...values, screenSize })

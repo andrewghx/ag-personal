@@ -1,13 +1,14 @@
 import { createProperty, createVariable } from './cssCalculationFunctions'
 
 export interface CSSProperties {
+  [key: string]: number|undefined|string
   smaller?: number
-  default: number
-  xs: number
-  sm: number
-  md: number
-  lg: number
-  xl: number
+  default?: number
+  xs?: number
+  sm?: number
+  md?: number
+  lg?: number
+  xl?: number
   unit?: string
 }
 
@@ -57,15 +58,33 @@ const characterFromLeft: CSSProperties = {
   xl: 10
 }
 
-const calculations = {
-  characterWidth: ({ height, screenSize }) => height[screenSize] / 2.25,
-  characterFromTop: ({ height , screenSize }) => height[screenSize] * 0.014,
-  titleTextFromLeft: ({ characterWidth, characterFromLeft, screenSize }) => characterWidth[screenSize] + characterFromLeft[screenSize] * 5,
-  titleTextFromTop: ({ height, titleTextSize, screenSize }) => height[screenSize] / 2.1 - (titleTextSize[screenSize] * 0.35),
-  laptopWidth: ({ height, screenSize }) => height[screenSize] * 1.6,
-  laptopFromTop: ({ height, screenSize }) => height[screenSize] * 0.042,
-  lineFromTop: ({ titleTextSize, titleTextFromTop, screenSize }) => titleTextSize[screenSize] * 0.75 + titleTextFromTop[screenSize],
-  lineHeight: ({ titleTextSize, screenSize }) => titleTextSize[screenSize] / 20
+interface Calculations {
+  [key: string]: CustomFunction
+}
+
+export interface CustomFunctionValues {
+  titleTextSize?: CSSProperties
+  titleTextFromTop?: CSSProperties
+  characterFromLeft?: CSSProperties
+  characterWidth?: CSSProperties
+  height?: CSSProperties
+}
+
+interface CustomFunctionWithScreenSize extends CustomFunctionValues {
+  screenSize: string
+}
+
+export type CustomFunction = (values: CustomFunctionWithScreenSize) => number
+
+const calculations: Calculations = {
+  characterWidth: ({ height = {}, screenSize }) => height[screenSize] as number / 2.25,
+  characterFromTop: ({ height = {} , screenSize }) => height[screenSize] as number * 0.014,
+  titleTextFromLeft: ({ characterWidth = {}, characterFromLeft = {}, screenSize }) => characterWidth[screenSize] as number + (characterFromLeft[screenSize] as number) * 5,
+  titleTextFromTop: ({ height = {}, titleTextSize = {}, screenSize }) => height[screenSize] as number / 2.1 - (titleTextSize[screenSize] as number * 0.35),
+  laptopWidth: ({ height = {}, screenSize }) => height[screenSize] as number * 1.6,
+  laptopFromTop: ({ height = {}, screenSize }) => height[screenSize] as number * 0.042,
+  lineFromTop: ({ titleTextSize = {}, titleTextFromTop = {}, screenSize }) => titleTextSize[screenSize] as number * 0.75 + (titleTextFromTop[screenSize] as number),
+  lineHeight: ({ titleTextSize = {}, screenSize }) => titleTextSize[screenSize] as number / 20
 }
 
 const characterWidth = createVariable({ height }, calculations.characterWidth)

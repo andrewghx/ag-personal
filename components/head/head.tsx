@@ -1,12 +1,5 @@
 import Head from 'next/head'
-
-const defaults = {
-  title: 'Andrew Griffiths - Web Developer, Software Engineer',
-  description: 'Default description',
-  url: '/og.png',
-  img: 'https://image.url',
-  robots: 'index, follow'
-}
+import defaults from '~/config/seo/meta-defaults'
 
 interface Props {
   title?: string
