@@ -7,7 +7,7 @@
     "test": "test",
     "dev": "nodemon",
     "build": "next build && tsc --project tsconfig.server.json",
-    "start": "cross-env NODE_ENV=production node dist/index.js",
+    "start": "cross-env NODE_ENV=production node -r ./tsconfig-paths-bootstrap.js dist/server/index.js",
     "export": "next export"
   },
   "author": "Andrew Griffiths",
