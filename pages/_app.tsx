@@ -1,6 +1,7 @@
 import App from 'next/app'
 import { ThemeProvider } from 'styled-components'
 import GlobalStyle from '~/components/common-styled-elements/globalStyle'
+import Favicons from '~/components/head/favicons'
 import FontAwesome from '~/components/fontAwesome'
 import Navigation from '~/components/navigation/nav'
 import Title from '~/components/title-section/title'
@@ -11,6 +12,7 @@ export default class MyApp extends App {
     const { Component, pageProps } = this.props
     return (
       <ThemeProvider theme={theme}>
+        <Favicons />
         <FontAwesome />
         <GlobalStyle />
         <Navigation />

@@ -9,17 +9,17 @@ interface NavLink {
 
 const links: NavLink[] = [
   {
-    href: '/',
+    href: '/link1',
     text: 'Link 1',
     icon: faBars
   },
   {
-    href: '/',
+    href: '/link2',
     text: 'Link 2',
     icon: faBars
   },
   {
-    href: '/',
+    href: '/link3',
     text: 'Link 3',
     icon: faBars
   }

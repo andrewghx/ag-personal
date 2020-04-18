@@ -1,11 +1,14 @@
 import { NavLogo, MobileLogo } from '~/components/navigation/navigation-styled-components'
+import Link from 'next/link'
 import settings from '~/config/navigation'
 
 const Logo: React.FC = () => (
-  <a href='/'>
-    <NavLogo color={settings.logo.color} />
-    <MobileLogo color={settings.logo.mobileColor}/>
-  </a>
+  <Link href='/'>
+    <a>
+      <NavLogo color={settings.logo.color} />
+      <MobileLogo color={settings.logo.mobileColor}/>
+    </a>
+  </Link>
 )
 
 export default Logo
