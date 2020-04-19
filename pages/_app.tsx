@@ -4,7 +4,6 @@ import GlobalStyle from '~/components/common-styled-elements/globalStyle'
 import Favicons from '~/components/head/favicons'
 import FontAwesome from '~/components/fontAwesome'
 import Navigation from '~/components/navigation/nav'
-import Title from '~/components/title-section/title'
 import theme from '~/config/theme'
 
 export default class MyApp extends App {
@@ -16,7 +15,6 @@ export default class MyApp extends App {
         <FontAwesome />
         <GlobalStyle />
         <Navigation />
-        <Title />
         <Component {...pageProps} />
       </ThemeProvider>
     )

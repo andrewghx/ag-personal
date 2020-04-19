@@ -81,8 +81,8 @@ const TitleText = styled.span<Props>`
   text-shadow: 1px 2px 4px ${props => props.theme.boxShadowColor};
   @media (min-width: ${props => props.theme.breakpoints.smMin}) {
     font-size: ${`${titleTextSize.sm}${titleTextSize.unit}`};
-    top: ${props => props.smaller ? `${(height.smaller || 0) * 1.1 / 2 - ((titleTextSize.sm || 0) * 0.75 / 2)}${titleTextFromTop.unit}` : `${titleTextFromTop.sm || 0 * 1.2}${titleTextFromTop.unit}`};
-    left: ${props => props.smaller ? '0px' : `${titleTextFromLeft.sm || 0 * 1.2}${titleTextFromLeft.unit}`};
+    top: ${props => props.smaller ? `${(height.smaller || 0) * 1.1 / 2 - ((titleTextSize.sm || 0) * 0.75 / 2)}${titleTextFromTop.unit}` : `${(titleTextFromTop.sm || 0) * 1.2}${titleTextFromTop.unit}`};
+    left: ${props => props.smaller ? '0px' : `${(titleTextFromLeft.sm || 0) * 1.2}${titleTextFromLeft.unit}`};
   }
   @media (min-width: ${props => props.theme.breakpoints.mdMin}) {
     font-size: ${`${titleTextSize.md}${titleTextSize.unit}`};
