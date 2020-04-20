@@ -1,4 +1,4 @@
-import { faBars } from '@fortawesome/free-solid-svg-icons'
+import { faLaptopCode, faAt, faFileAlt } from '@fortawesome/free-solid-svg-icons'
 import { IconDefinition } from '@fortawesome/fontawesome-common-types'
 
 interface NavLink {
@@ -9,19 +9,19 @@ interface NavLink {
 
 const links: NavLink[] = [
   {
-    href: '/link1',
-    text: 'Link 1',
-    icon: faBars
+    href: '/about',
+    text: 'About me',
+    icon: faFileAlt
   },
   {
-    href: '/link2',
-    text: 'Link 2',
-    icon: faBars
+    href: '/projects',
+    text: 'Projects',
+    icon: faLaptopCode
   },
   {
-    href: '/link3',
-    text: 'Link 3',
-    icon: faBars
+    href: '/contact',
+    text: 'Contact',
+    icon: faAt
   }
 ]
 

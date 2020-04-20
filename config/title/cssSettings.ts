@@ -23,13 +23,13 @@ const height: CSSProperties = {
   xl: 350
 }
 const titleTextSize: CSSProperties = {
-  smaller: 100,
-  default: 100,
+  smaller: 60,
+  default: 60,
   xs: 25,
-  sm: 35,
-  md: 60,
-  lg: 80,
-  xl: 100
+  sm: 30,
+  md: 40,
+  lg: 50,
+  xl: 60
 }
 const bgTextSize: CSSProperties = {
   smaller: 210,

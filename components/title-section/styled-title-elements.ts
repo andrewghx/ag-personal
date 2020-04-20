@@ -23,7 +23,7 @@ const {
   lineHeight
 } = cssSettings
 
-const TitleContainer = styled.div<Props>`
+const TitleContainer = styled.header<Props>`
   position: relative;
   background: ${props => props.theme.colors.primary};
   color: ${props => props.theme.colors.light};

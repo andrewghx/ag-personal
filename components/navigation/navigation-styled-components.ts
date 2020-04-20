@@ -8,7 +8,7 @@ interface Props extends ThemeProps<any> {
   open?: boolean
 }
 
-const NavOuter = styled.div`
+const NavOuter = styled.nav`
   @media (max-width: ${props => props.theme.breakpoints.xsMax}) {
     width: 100%;
     z-index: 1;
@@ -94,6 +94,7 @@ const NavLink = styled(Anchor)`
     }
     svg {
       padding-right: 1rem;
+      min-width: 20px;
     }
   }
   @media (min-width: ${props => props.theme.breakpoints.smMin}) {

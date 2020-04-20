@@ -1,4 +1,4 @@
-import { BackgroundText, Line, TitleText, TitleMe, TitleLaptop, TitleContainer } from '~/components/title-section/styled-title-elements'
+import { BackgroundText, TitleText, TitleMe, TitleLaptop, TitleContainer } from '~/components/title-section/styled-title-elements'
 import titleSettings from '~/config/title'
 
 interface Props {
@@ -14,7 +14,6 @@ const Title: React.FC<Props> = props => {
       <TitleLaptop {...props} />
       <TitleMe {...props} />
       <TitleText {...props}>{titleText}</TitleText>
-      <Line {...props} />
     </TitleContainer>
   )
 }
