@@ -1,15 +1,15 @@
-import contactSettings, { SocialMediaLinks } from '~/config/settings/contact'
-
 export interface ContactSectionSettings {
   titleText: string
   linkText: string
-  socialIcons: SocialMediaLinks
+  linkHref: string
+  socialMediaExclusions?: string[]
 }
 
 const settings: ContactSectionSettings = {
-  titleText: 'A bit about me',
-  linkText: 'See example projects',
-  socialIcons: contactSettings.socialMedia
+  titleText: 'Need my skills? Want to ask me something?',
+  linkText: 'Get in touch',
+  linkHref: '/contact',
+  socialMediaExclusions: []
 }
 
 export default settings

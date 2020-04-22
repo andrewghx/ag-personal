@@ -9,8 +9,15 @@ import {
   faFileAlt
 } from '@fortawesome/free-solid-svg-icons'
 
+import {
+  faGithub,
+  faFacebook,
+  faTwitter,
+  faLinkedin
+} from '@fortawesome/free-brands-svg-icons'
+
 config.autoAddCss = false 
-library.add(faBars, faTimes, faLaptopCode, faAt, faFileAlt)
+library.add(faBars, faTimes, faLaptopCode, faAt, faFileAlt, faGithub, faFacebook, faTwitter, faLinkedin)
 
 const FontAwesome = () => null
 

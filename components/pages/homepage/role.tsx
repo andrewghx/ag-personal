@@ -25,9 +25,11 @@ interface Props {
 const Role: React.FC<Props> = ({ img, title, body }) => (
   <RoleTable>
     <thead>
-      <th>
-        <img alt={title} src={img} />
-      </th>
+      <tr>
+        <th>
+          <img alt={title} src={img} />
+        </th>
+      </tr>
     </thead>
     <tbody>
       <tr>

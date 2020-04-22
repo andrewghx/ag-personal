@@ -1,35 +1,46 @@
+import { IconDefinition } from '@fortawesome/fontawesome-common-types'
+import {
+  faGithub,
+  faFacebook,
+  faTwitter,
+  faLinkedin
+} from '@fortawesome/free-brands-svg-icons'
+
 export interface ContactSettings {
   socialMedia: SocialMediaLinks
 }
 
 export interface SocialLink {
-  img: string
+  img: IconDefinition
   href: string
+  name: string
 }
 
-export interface SocialMediaLinks {
-  [key: string]: SocialLink
-}
+export type SocialMediaLinks = SocialLink[]
 
 const contactSettings = {
-  socialMedia: {
-    github: {
-      img: '',
-      href: ''
+  socialMedia: [
+    {
+      img: faGithub,
+      name: 'Github',
+      href: 'andrewghx/now-test'
     },
-    linkedIn: {
-      img: '',
-      href: ''
+    {
+      img: faLinkedin,
+      name: 'LinkedIn',
+      href: 'http://linkedin.com/in/andrew-griffiths-a3a98b1a6'
     },
-    twitter: {
-      img: '',
-      href: ''
+    {
+      img: faTwitter,
+      name: 'Twitter',
+      href: 'https://twitter.com/andrewg010'
     },
-    facebook: {
-      img: '',
-      href: ''
+    {
+      img: faFacebook,
+      name: 'Facebook',
+      href: 'https://www.facebook.com/griffithsa.development/'
     }
-  }
+  ]
 }
 
 export default contactSettings

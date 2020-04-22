@@ -3,6 +3,7 @@ import getDomain from '~/config/pages/helpers/getDomain'
 import introduction from '~/config/pages/homepage/introduction'
 import about from '~/config/pages/homepage/about'
 import projects from '~/config/pages/homepage/projects'
+import contact from '~/config/pages/homepage/contact'
 
 const settings: PageSettings = {
   props: {
@@ -17,6 +18,7 @@ const settings: PageSettings = {
       introduction,
       about,
       projects,
+      contact
     }
   }
 }

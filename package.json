@@ -28,6 +28,7 @@
     "styled-components": "^4.0.0"
   },
   "devDependencies": {
+    "@fortawesome/free-brands-svg-icons": "^5.13.0",
     "@types/find-root": "^1.1.1",
     "@types/node": "^13.11.0",
     "@types/react": "^16.9.32",
