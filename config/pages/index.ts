@@ -1,3 +1,3 @@
-import homepage from '~/config/pages/core-pages/homepage'
+import homepage from '~/config/pages/homepage'
 
 export { homepage }

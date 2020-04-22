@@ -7,9 +7,15 @@ export interface PageProps {
   metaOgImg?: string
   titleText: string
   smallerTitle: boolean
+  sections: any
 }
 
 export interface PageSettings {
   props: PageProps
+}
+
+export interface SocialMediaIcon {
+  href: string
+  img: string
 }
 

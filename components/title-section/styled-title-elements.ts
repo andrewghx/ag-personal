@@ -67,7 +67,7 @@ const TitleMe = styled(Me)<Props>`
   }
 `
 
-const TitleText = styled.span<Props>`
+const TitleText = styled.h1<Props>`
   width: ${props => props.smaller ? '100%' : 'initial'};
   text-align: ${props => props.smaller ? 'center' : 'initial'};
   font-weight: bolder;

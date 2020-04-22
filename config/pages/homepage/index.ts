@@ -1,5 +1,8 @@
 import { PageSettings } from '~/@types'
 import getDomain from '~/config/pages/helpers/getDomain'
+import introduction from '~/config/pages/homepage/introduction'
+import about from '~/config/pages/homepage/about'
+import projects from '~/config/pages/homepage/projects'
 
 const settings: PageSettings = {
   props: {
@@ -9,7 +12,12 @@ const settings: PageSettings = {
     headTitle: 'Andrew Griffiths - Web Developer, Software Engineer',
     metaDescription: 'Page description',
     metaOgImg: '/img/og.png',
-    smallerTitle: false
+    smallerTitle: false,
+    sections: {
+      introduction,
+      about,
+      projects,
+    }
   }
 }
 
