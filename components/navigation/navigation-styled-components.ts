@@ -34,6 +34,9 @@ const NavLogo = styled(Logo)`
   position: relative;
   padding-top: 0.4rem;
   padding-left: 0.25rem;
+  img {
+    margin-bottom: 0.4rem;
+  }
   @media (min-width: ${props => props.theme.breakpoints.smMin}) {
     display: block;
   }

@@ -11,8 +11,8 @@ const Title: React.FC<Props> = props => {
   return (
     <TitleContainer {...props}>
       <BackgroundText {...props}>{titleSettings.backgroundText}</BackgroundText>
-      <TitleLaptop {...props} />
-      <TitleMe {...props} />
+      <TitleLaptop staticImg {...props} />
+      <TitleMe staticImg {...props} />
       <TitleText {...props}>{titleText}</TitleText>
     </TitleContainer>
   )

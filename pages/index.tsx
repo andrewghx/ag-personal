@@ -1,15 +1,14 @@
 import Title from '~/components/title-section/title'
 import Head from '~/components/head/head'
-import ContentParser from '~/components/content-parser/contentParser'
 import { PageProps } from '~/@types'
 import { homepage } from '~/config/pages'
+import IntroductionSection from '~/components/pages/homepage/introduction'
 
-const IndexPage = ({ page, titleText, smallerTitle, headTitle, metaDescription, metaOgImg }: PageProps) => (
+const IndexPage = ({ titleText, smallerTitle, headTitle, metaDescription, metaOgImg }: PageProps) => (
   <>
     <Head description={metaDescription} title={headTitle} img={metaOgImg} />
     <Title titleText={titleText} smaller={smallerTitle} />
-    <h2>Hello this page is the {page} page</h2>
-    <ContentParser html={'<b addstyle="color:green;">Hello</b><hr />'} />
+    <IntroductionSection />
   </>
 )
 

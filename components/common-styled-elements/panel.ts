@@ -4,13 +4,13 @@ interface Props extends ThemeProps<any> {
   noBackground?: boolean
 }
 
-const Panel = styled.div`
+const Panel = styled.div<Props>`
   margin: 0.5rem;
   background: ${props => props.theme.colors.secondary};
   box-shadow: 0px 4px 4px ${props => props.theme.boxShadowColor};
 `
 
-const PanelBody = styled.div`
+const PanelBody = styled.div<Props>`
   padding: 0.5rem 0.5rem;
 `
 

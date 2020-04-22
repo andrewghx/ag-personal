@@ -1,8 +1,10 @@
 import styled, { ThemeProps } from 'styled-components'
 
 interface Props extends ThemeProps<any> {
-  inline: boolean,
-  fillContainer: string
+  inline?: boolean,
+  fillContainer?: boolean
+  src?: string
+  alt?: string
 }
 
 const Image = styled.img<Props>`

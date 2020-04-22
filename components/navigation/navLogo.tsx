@@ -5,7 +5,7 @@ import settings from '~/config/navigation'
 const Logo: React.FC = () => (
   <Link href='/'>
     <a>
-      <NavLogo color={settings.logo.color} />
+      <NavLogo staticImg color={settings.logo.color} />
       <MobileLogo color={settings.logo.mobileColor}/>
     </a>
   </Link>

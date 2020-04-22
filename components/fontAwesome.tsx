@@ -1,7 +1,7 @@
 import { config, library } from '@fortawesome/fontawesome-svg-core'
 import '@fortawesome/fontawesome-svg-core/styles.css'
 
-import { 
+import {
   faBars, 
   faTimes,
   faLaptopCode,

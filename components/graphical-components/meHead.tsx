@@ -1,11 +1,13 @@
 import React from 'react'
 import styled from 'styled-components'
+import Image from '~/components/common-styled-elements/image'
 import meHead from '~/config/svg/meHead'
 
 interface Props {
   inline?: boolean,
   color?: string,
   monotone?: boolean
+  staticImg?: boolean
 }
 
 const MeHeadDiv = styled.div<Props>`
@@ -23,6 +25,7 @@ const generateColouredSVG = (monotone?: boolean, color?: string): string => {
 }
 
 const MeHead: React.FC<Props> = props => {
+  if (props.staticImg) return <MeHeadDiv {...props}><Image alt='Cartoon of my head' fillContainer src='/img/svg/andrew-head.svg' /></MeHeadDiv>
   const chosenSvg = generateColouredSVG(props.monotone, props.color)
   return <MeHeadDiv {...props} dangerouslySetInnerHTML={{ __html: chosenSvg }} />
 }
