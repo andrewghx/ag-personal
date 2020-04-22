@@ -6,6 +6,7 @@ import IntroductionSection from '~/components/pages/homepage/introduction'
 import AboutSection from '~/components/pages/homepage/about'
 import ProjectSection from '~/components/pages/homepage/projects'
 import ContactSection from '~/components/pages/homepage/contact'
+import Footer from '~/components/footer/footer'
 
 const IndexPage = ({ titleText, smallerTitle, headTitle, metaDescription, metaOgImg, sections }: PageProps) => (
   <>
@@ -15,6 +16,7 @@ const IndexPage = ({ titleText, smallerTitle, headTitle, metaDescription, metaOg
     <AboutSection {...sections.about} />
     <ProjectSection {...sections.projects} />
     <ContactSection {...sections.contact} />
+    <Footer />
   </>
 )
 
