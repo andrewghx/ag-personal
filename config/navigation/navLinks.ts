@@ -1,4 +1,4 @@
-import { faLaptopCode, faAt, faFileAlt } from '@fortawesome/free-solid-svg-icons'
+import { faAt, faFileAlt } from '@fortawesome/free-solid-svg-icons'
 import { IconDefinition } from '@fortawesome/fontawesome-common-types'
 
 interface NavLink {
@@ -13,11 +13,11 @@ const links: NavLink[] = [
     text: 'About me',
     icon: faFileAlt
   },
-  {
+/*   {
     href: '/projects',
     text: 'Projects',
     icon: faLaptopCode
-  },
+  }, */
   {
     href: '/contact',
     text: 'Contact',

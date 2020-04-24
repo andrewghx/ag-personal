@@ -6,7 +6,10 @@ import {
   faTimes,
   faLaptopCode,
   faAt,
-  faFileAlt
+  faFileAlt,
+  faGraduationCap,
+  faMapMarkerAlt,
+
 } from '@fortawesome/free-solid-svg-icons'
 
 import {
@@ -17,7 +20,7 @@ import {
 } from '@fortawesome/free-brands-svg-icons'
 
 config.autoAddCss = false 
-library.add(faBars, faTimes, faLaptopCode, faAt, faFileAlt, faGithub, faFacebook, faTwitter, faLinkedin)
+library.add(faBars, faTimes, faLaptopCode, faAt, faFileAlt, faGithub, faFacebook, faTwitter, faLinkedin, faGraduationCap, faMapMarkerAlt)
 
 const FontAwesome = () => null
 

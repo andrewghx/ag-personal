@@ -1,7 +1,6 @@
 import Title from '~/components/title-section/title'
 import Head from '~/components/head/head'
 import { PageProps } from '~/@types'
-import { homepage } from '~/config/pages'
 import IntroductionSection from '~/components/pages/homepage/introduction'
 import AboutSection from '~/components/pages/homepage/about'
 import ProjectSection from '~/components/pages/homepage/projects'
@@ -23,9 +22,8 @@ const IndexPage = ({ titleText, smallerTitle, headTitle, metaDescription, metaOg
 export default IndexPage
 
 export async function getStaticProps() {
+  const { homepage } = await import('~/config/pages')
   return {
-    props: {
-      ...homepage.props
-    }
+    ...homepage
   }
 }

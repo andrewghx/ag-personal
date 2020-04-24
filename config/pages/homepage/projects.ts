@@ -4,6 +4,7 @@ export interface ProjectSettings {
   svgAlt: string
   copy: string
   linkText: string
+  linkUrl: string
 }
 
 const settings: ProjectSettings = {
@@ -22,7 +23,8 @@ const settings: ProjectSettings = {
   `,
   svgUrl: '/img/svg/portfolio.svg',
   svgAlt: 'Image of projects in a folder',
-  linkText: 'See example projects'
+  linkText: 'See example projects',
+  linkUrl: '/projects'
 }
 
 export default settings

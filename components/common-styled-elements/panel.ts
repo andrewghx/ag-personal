@@ -11,17 +11,17 @@ const Panel = styled.div<Props>`
 `
 
 const PanelBody = styled.div<Props>`
-  padding: 0.5rem 0.5rem;
+  padding: 1.25rem 1.25rem;
 `
 
 const PanelHeading = styled.h2<Props>`
   background: ${props => props.noBackground ? '' : props.theme.colors.primary};
-  padding-top: 1rem;
-  padding-bottom: 0.5rem;
-  padding-left: 0.5rem;
-  padding-right: 0.5rem;
+  padding-top: 1.25rem;
+  padding-bottom: 0.75rem;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
   margin: 0;
-  color: ${props => props.noBackground ? 'inherit' : props.theme.colors.secondary};
+  color: ${props => props.noBackground ? props.theme.colors.primary : props.theme.colors.secondary};
 `
 
 export { Panel, PanelBody, PanelHeading }

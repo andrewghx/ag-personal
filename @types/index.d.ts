@@ -7,7 +7,8 @@ export interface PageProps {
   metaOgImg?: string
   titleText: string
   smallerTitle: boolean
-  sections: any
+  contentHeading?: string
+  sections?: any
 }
 
 export interface PageSettings {
