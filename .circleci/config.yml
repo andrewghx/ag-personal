@@ -1,7 +1,6 @@
 version: 2.1
 orbs:
   node: circleci/node@1.1.6
-  node2: circleci/node@1.1.6
 jobs:
   build-and-export:
     executor:
@@ -15,16 +14,14 @@ jobs:
             - run: npm run export
   docs-deploy:
     executor:
-      name: node2/default
+      name: node/default
     steps:
       - checkout
-      - node2/with-cache:
+      - node/with-cache:
         steps:
           - run: echo testy testy
 workflows:
     build-and-export:
       jobs:
         - build-and-export
-        - docs-deploy:
-          requires:
-            - build-and-export
+        - docs-deploy
