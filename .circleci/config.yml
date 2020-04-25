@@ -11,7 +11,7 @@ jobs:
           steps:
             - run: echo hi
       - deploy: 
-          command: echo $CIRCLE_BRANCH
+          command: if [ $CIRCLE_BRANCH = test-ci ]; then echo ernferkfn; fi
 workflows:
     build-and-export:
       jobs:
