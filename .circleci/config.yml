@@ -23,4 +23,8 @@ jobs:
 workflows:
     build-and-export:
       jobs:
-        - build-and-export
+        - build-and-export:
+            filters:
+              branches:
+                ignore:
+                  - gh-pages
