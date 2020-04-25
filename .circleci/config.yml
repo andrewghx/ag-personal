@@ -12,16 +12,7 @@ jobs:
             - run: npm install
             - run: npm run build
             - run: npm run export
-  docs-deploy:
-    executor:
-      name: node/default
-    steps:
-      - checkout
-      - node/with-cache:
-        steps:
-          - run: echo testy testy
 workflows:
     build-and-export:
       jobs:
         - build-and-export
-        - docs-deploy
