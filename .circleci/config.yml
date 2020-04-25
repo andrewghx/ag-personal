@@ -12,7 +12,29 @@ jobs:
             - run: npm install
             - run: npm run build
             - run: npm run export
+  docs-deploy:
+    executor:
+      name: node/default
+    steps:
+      - checkout
+      - attach_workspace:
+          at: out
+      - run:
+          name: Install and configure dependencies
+          command: |
+            npm install -g gh-pages@2.0.1
+            git config user.email "andrewg010@gmail.com"
+            git config user.name "andrewghx"
+      - run:
+          name: Deploy docs to gh-pages branch
+          command: gh-pages --dist out
 workflows:
     build-and-export:
       jobs:
         - build-and-export
+        - docs-deploy:
+          requires:
+            - build-and-export
+          filters:
+            branches:
+              only: master
