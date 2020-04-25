@@ -15,7 +15,7 @@ jobs:
             - run: npm run export
   docs-deploy:
     executor:
-      name: node/default
+      name: node2/default
     steps:
       - checkout
       - node2/with-cache:
