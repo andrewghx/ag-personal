@@ -9,9 +9,12 @@ jobs:
       - checkout
       - node/with-cache:
           steps:
-            - run: echo hi
+            - run: npm install
+            - run: npm install gh-pages
+            - run: npm run build
+            - run: npm run export
       - deploy: 
-          command: if [ $CIRCLE_BRANCH = master ]; then git config user.email "andrewg010@gmail.com"; git config user.name "andrewghx"; fi
+          command: if [ $CIRCLE_BRANCH = master ]; then git config user.email "andrewg010@gmail.com"; git config user.name "andrewghx"; gh-pages --dist docs/_build/html; fi
 workflows:
     build-and-export:
       jobs:
