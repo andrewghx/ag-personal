@@ -10,11 +10,8 @@ jobs:
       - node/with-cache:
         steps:
           - run: npm install
-          - run: npm install -g --silent gh-pages@2.0.1
           - run: npm run build
           - run: npm run export
-          - run: git config user.email "andrew.griffiths@holidayextras.com"
-          - run: git config user.name "andrewghx"
 workflows:
     build-and-export:
       jobs:
