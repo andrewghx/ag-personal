@@ -1,7 +1,14 @@
 import { createGlobalStyle } from 'styled-components'
 
+const assetPrefix = process.env.ASSET_PREFIX
+
 const GlobalStyle = createGlobalStyle`
-  @import url('https://fonts.googleapis.com/css?family=Rockwell&display=swap');
+  @font-face {
+    font-family: 'Rockwell, Arial';
+      src: url(${`${assetPrefix}/fonts/Rockwell.woff`});
+      src: url(${`${assetPrefix}/fonts/Rockwell.woff2`});
+      src: url(${`${assetPrefix}/fonts/Rockwell.ttf`});
+  }
   html {
     font-family: ${props => props.theme.fontFamily};
     line-height: 1.15;

@@ -23,5 +23,5 @@ export default {
   },
   boxShadowColor: 'rgba(0,0,0,0.25)',
   borderRadius: '3px',
-  fontFamily: 'Rockwell',
+  fontFamily: 'Rockwell, Arial',
 }
