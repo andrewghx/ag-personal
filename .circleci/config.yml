@@ -15,12 +15,10 @@ jobs:
             - run: npm install gh-pages
             - run: npm run build
             - run: npm run export
-      - deploy:
-          command: if [ $CIRCLE_BRANCH = master ]; then touch out/.nojekyll ; fi
       - deploy: 
           command: if [ $CIRCLE_BRANCH = master ]; then git config user.email "ci-build@griffithsa.co.uk"; git config user.name "ci-build" ; fi
       - deploy:
-          command: if [ $CIRCLE_BRANCH = master ]; then node node_modules/gh-pages/bin/gh-pages.js --dist out; fi
+          command: if [ $CIRCLE_BRANCH = master ]; then node node_modules/gh-pages/bin/gh-pages.js --dist out --dotfiles; fi
       - add_ssh_keys:
           fingerprints:
             - b5:24:a9:5c:f6:72:d1:91:aa:73:20:44:fa:21:71:e4
