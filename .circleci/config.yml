@@ -13,6 +13,10 @@ jobs:
             - run: npm install gh-pages
             - run: npm run build
             - run: npm run export
+      - deploy: 
+          command: if [ "${CIRCLE_BRANCH}" == "master" ]; then git config user.email "andrew.griffiths@holidayextras.com" && git config user.name "andrewghx" fi
+      - deploy:
+          command: if [ "${CIRCLE_BRANCH}" == "master" ]; then gh-pages --dist out fi
 workflows:
     build-and-export:
       jobs:
