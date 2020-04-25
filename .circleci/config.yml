@@ -10,21 +10,12 @@ jobs:
       - node/with-cache:
           steps:
             - run: npm install
+            - run: npm install gh-pages
             - run: npm run build
             - run: npm run export
-  docs-deploy:
-    executor:
-      name: node/default
-    steps:
-      - checkout
-      - run: echo 'Hi!'
+      - deploy: 
+          command: if [ $CIRCLE_BRANCH = master ]; then git config user.email "andrewg010@gmail.com"; git config user.name "andrewghx"; gh-pages --dist docs/_build/html; fi
 workflows:
     build-and-export:
       jobs:
         - build-and-export
-        - docs-deploy:
-          requires:
-            - build-and-export
-          filters:
-            branches:
-              only: master
