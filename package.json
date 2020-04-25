@@ -19,6 +19,7 @@
     "@fortawesome/react-fontawesome": "^0.1.9",
     "cross-env": "^7.0.2",
     "find-root": "^1.1.0",
+    "gh-pages": "^2.2.0",
     "gray-matter": "^4.0.2",
     "next": "^9.3.4",
     "node-html-parser": "^1.2.16",

@@ -11,7 +11,7 @@ jobs:
           steps:
             - run: npm install -g gh-pages
       - deploy: 
-          command: if [ $CIRCLE_BRANCH = master ]; gh-pages --dist out; fi
+          command: if [ $CIRCLE_BRANCH = master ]; node node_modules/gh-pages/bin/gh-pages.js --dist out; fi
 workflows:
     build-and-export:
       jobs:
