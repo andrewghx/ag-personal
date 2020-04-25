@@ -6,10 +6,20 @@ interface Page {
 
 const pages: Page[] = [
   {
-    url: '/page/path', 
-    changefreq: 'daily', 
-    priority: 0.3
-  }
+    url: '/', 
+    changefreq: 'weekly', 
+    priority: 1
+  },
+  {
+    url: '/about', 
+    changefreq: 'monthly', 
+    priority: 0.9
+  },
+  {
+    url: '/contact', 
+    changefreq: 'monthly', 
+    priority: 0.5
+  },
 ]
 
 export default pages
