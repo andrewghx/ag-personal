@@ -2,7 +2,7 @@ const webpack = require('webpack')
 const path = require('path')
 const withCSS = require('@zeit/next-css')
 const isProd = process.env.NODE_ENV === 'production'
-const assetPrefix = isProd ? '/ag-personal' : ''
+const assetPrefix = isProd ? 'https://www.griffithsa.co.uk' : ''
 
 module.exports = withCSS({
   webpack: config => {
