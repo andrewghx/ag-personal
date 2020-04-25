@@ -16,7 +16,7 @@ const MeDiv = styled.div<Props>`
 `
 
 const Me: React.FC<Props> = props => {
-  if (props.staticImg) return <MeDiv {...props}><Image alt='Cartoon of me' fillContainer src='/img/svg/andrew.svg' /></MeDiv>
+  if (props.staticImg) return <MeDiv {...props}><Image alt='Cartoon of me' fillContainer src='img/svg/andrew.svg' /></MeDiv>
   const replacedSVG = me.replace(/{COLOR}/g, props.color || theme.colors.primary)
   return <MeDiv {...props} dangerouslySetInnerHTML={{ __html: replacedSVG }} />
 }

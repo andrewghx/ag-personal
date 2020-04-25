@@ -16,7 +16,7 @@ const LogoDiv = styled.div<Props>`
 `
 
 const Logo: React.FC<Props> = props => {
-  if (props.staticImg && !props.color) return <LogoDiv {...props}><Image alt='Andrew Griffiths Logo' fillContainer src='/img/svg/aglogo.svg' /></LogoDiv>
+  if (props.staticImg && !props.color) return <LogoDiv {...props}><Image alt='Andrew Griffiths Logo' fillContainer src='img/svg/aglogo.svg' /></LogoDiv>
   const replacedSVG = logo.replace(/{COLOR}/g, props.color || theme.colors.primary)
   return <LogoDiv {...props} dangerouslySetInnerHTML={{ __html: replacedSVG }} />
 }

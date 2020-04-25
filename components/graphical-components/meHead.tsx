@@ -25,7 +25,7 @@ const generateColouredSVG = (monotone?: boolean, color?: string): string => {
 }
 
 const MeHead: React.FC<Props> = props => {
-  if (props.staticImg) return <MeHeadDiv {...props}><Image alt='Cartoon of my head' fillContainer src='/img/svg/andrew-head.svg' /></MeHeadDiv>
+  if (props.staticImg) return <MeHeadDiv {...props}><Image alt='Cartoon of my head' fillContainer src='img/svg/andrew-head.svg' /></MeHeadDiv>
   const chosenSvg = generateColouredSVG(props.monotone, props.color)
   return <MeHeadDiv {...props} dangerouslySetInnerHTML={{ __html: chosenSvg }} />
 }

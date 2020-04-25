@@ -21,7 +21,7 @@ const settings: ProjectSettings = {
       <li>Contributing to SEO through optimising page speed and content</li>
     </ul>
   `,
-  svgUrl: '/img/svg/portfolio.svg',
+  svgUrl: 'img/svg/portfolio.svg',
   svgAlt: 'Image of projects in a folder',
   linkText: 'See example projects',
   linkUrl: '/projects'

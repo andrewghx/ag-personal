@@ -9,7 +9,7 @@ const settings: PageSettings = {
     titleText: 'Get in touch with me',
     headTitle: 'A Griffiths - Web Developer, Software Engineer - Contact me',
     metaDescription: 'Page description',
-    metaOgImg: '/img/og.png',
+    metaOgImg: 'img/og.png',
     smallerTitle: false,
     contentHeading: 'Would you like my help or just want to chat about something? Maybe a project you would like me for?',
     sections: {

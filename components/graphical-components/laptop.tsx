@@ -14,7 +14,7 @@ const LaptopDiv = styled.div`
 `
 
 const Laptop: React.FC<Props> = props => {
-  if (props.staticImg) return <LaptopDiv {...props}><Image alt='Cartoon laptop' fillContainer src='/img/svg/laptop.svg' /></LaptopDiv>
+  if (props.staticImg) return <LaptopDiv {...props}><Image alt='Cartoon laptop' fillContainer src='img/svg/laptop.svg' /></LaptopDiv>
   return <LaptopDiv {...props} dangerouslySetInnerHTML={{ __html: laptopSvg }} />
 }
 

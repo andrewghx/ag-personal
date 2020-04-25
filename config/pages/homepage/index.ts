@@ -12,7 +12,7 @@ const settings: PageSettings = {
     titleText: 'Developer, Engineer, Enthusiast',
     headTitle: 'Andrew Griffiths - Web Developer, Software Engineer',
     metaDescription: 'Page description',
-    metaOgImg: '/img/og.png',
+    metaOgImg: 'img/og.png',
     smallerTitle: false,
     sections: {
       introduction,
