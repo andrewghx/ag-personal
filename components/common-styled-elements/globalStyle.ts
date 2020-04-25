@@ -1,6 +1,7 @@
 import { createGlobalStyle } from 'styled-components'
 
 const GlobalStyle = createGlobalStyle`
+  @import url('https://fonts.googleapis.com/css?family=Rockwell&display=swap');
   html {
     font-family: ${props => props.theme.fontFamily};
     line-height: 1.15;
