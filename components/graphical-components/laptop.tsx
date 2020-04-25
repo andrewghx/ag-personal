@@ -2,6 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import Image from '~/components/common-styled-elements/image'
 import laptopSvg from '~/config/svg/laptopSvg'
+const assetPrefix = process.env.ASSET_PREFIX
 
 interface Props {
   inline?: boolean
@@ -14,7 +15,7 @@ const LaptopDiv = styled.div`
 `
 
 const Laptop: React.FC<Props> = props => {
-  if (props.staticImg) return <LaptopDiv {...props}><Image alt='Cartoon laptop' fillContainer src='img/svg/laptop.svg' /></LaptopDiv>
+  if (props.staticImg) return <LaptopDiv {...props}><Image alt='Cartoon laptop' fillContainer src={`${assetPrefix}/img/svg/laptop.svg`} /></LaptopDiv>
   return <LaptopDiv {...props} dangerouslySetInnerHTML={{ __html: laptopSvg }} />
 }
 

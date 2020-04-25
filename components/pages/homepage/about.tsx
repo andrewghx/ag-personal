@@ -8,7 +8,7 @@ import Link from '~/components/link'
 import { AboutSettings } from '~/config/pages/homepage/about'
 
 const ContentContainer = styled(Container)`
-  padding-bottom: 2rem
+  padding-bottom: 2rem;
   h4 {
     padding-bottom: 2rem;
   }
