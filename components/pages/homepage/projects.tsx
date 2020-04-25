@@ -5,7 +5,7 @@ import { ProjectSettings } from '~/config/pages/homepage/projects'
 import Image from '~/components/common-styled-elements/image'
 import ContentParser from '~/components/content-parser/contentParser'
 // import Button from '~/components/common-styled-elements/button'
-// import Link from 'next/link'
+// import Link from '~/components/link'
 
 const Section = styled(Container)`
   padding-top: 3rem;

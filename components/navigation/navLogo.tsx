@@ -1,5 +1,5 @@
 import { NavLogo, MobileLogo } from '~/components/navigation/navigation-styled-components'
-import Link from 'next/link'
+import Link from '~/components/link'
 import settings from '~/config/navigation'
 
 const Logo: React.FC = () => (

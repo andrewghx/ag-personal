@@ -4,7 +4,7 @@ import Container from '~/components/common-styled-elements/container'
 import Heading from '~/components/common-styled-elements/heading'
 import Button from '~/components/common-styled-elements/button'
 import SocialIcons from '~/components/socialIcons'
-import Link from 'next/link'
+import Link from '~/components/link'
 import { ContactSectionSettings } from '~/config/pages/homepage/contact'
 
 const ContentContainer = styled(Container)`

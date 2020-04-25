@@ -1,6 +1,6 @@
 import { NavLink, NavItem, NavLinks } from '~/components/navigation/navigation-styled-components'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import Link from 'next/link'
+import Link from '~/components/link'
 import navLinks from '~/config/navigation/navLinks'
 
 interface Props {

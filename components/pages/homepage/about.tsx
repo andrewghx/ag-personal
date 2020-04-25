@@ -4,7 +4,7 @@ import Container from '~/components/common-styled-elements/container'
 import Heading from '~/components/common-styled-elements/heading'
 import ContentParser from '~/components/content-parser/contentParser'
 import Button from '~/components/common-styled-elements/button'
-import Link from 'next/link'
+import Link from '~/components/link'
 import { AboutSettings } from '~/config/pages/homepage/about'
 
 const ContentContainer = styled(Container)`

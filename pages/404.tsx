@@ -4,7 +4,7 @@ import Heading from '~/components/common-styled-elements/heading'
 import Title from '~/components/title-section/title'
 import Container from '~/components/common-styled-elements/container'
 import Anchor from '~/components/common-styled-elements/anchor'
-import Link from 'next/link'
+import Link from '~/components/link'
 import Footer from '~/components/footer/footer'
 
 const ErrorPageContainer = styled(Container)`
