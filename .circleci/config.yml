@@ -9,7 +9,7 @@ jobs:
       - checkout
       - node/with-cache:
           steps:
-            - run: npm install -g gh-pages
+            - run: npm install gh-pages
       - deploy: 
           command: if [ $CIRCLE_BRANCH = master ]; node node_modules/gh-pages/bin/gh-pages.js --dist out; fi
 workflows:
