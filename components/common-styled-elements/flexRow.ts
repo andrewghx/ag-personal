@@ -14,9 +14,9 @@ const Row = styled.div<Props>`
 
 const Col = styled.div<Props>`
   width: 100%;
-  padding: 0rem 1rem;
   @media(min-width: ${props => props.theme.breakpoints.smMin}) {
     width: ${props => props.width ? props.width : '100%'};
+    padding: 0rem 1rem;
   }
   
 `

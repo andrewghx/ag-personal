@@ -43,13 +43,11 @@ const StyledPanel = styled(Panel)`
   }
 `
 
-const ContentContainer = styled.div`
+const FlexContentContainer = styled.div`
   display: flex;
   align-content: stretch;
-`
-
-const ContentArea = styled.div`
-  width: 100%;
+  align-content: center;
+  align-items: center;
 `
 
 const BasicsSection: React.FC<IntroductionSettings> = ({ titleText, copy, infoPoints }) => (
@@ -60,13 +58,11 @@ const BasicsSection: React.FC<IntroductionSettings> = ({ titleText, copy, infoPo
         {titleText}
       </PanelHeading>
       <PanelBody>
-        <ContentContainer>
+        <FlexContentContainer>
           <MeSmallerDevices staticImg />
-          <ContentArea>
-            <InfoPoints infoPoints={infoPoints} />
-            <ContentParser html={copy} />
-          </ContentArea>
-        </ContentContainer>
+          <InfoPoints infoPoints={infoPoints} />
+        </FlexContentContainer>
+        <ContentParser html={copy} />
       </PanelBody>
     </StyledPanel>
   </FlexContainer>
