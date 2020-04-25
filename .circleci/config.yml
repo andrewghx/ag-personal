@@ -14,7 +14,7 @@ jobs:
             - run: npm run build
             - run: npm run export
       - deploy: 
-        command: if [ $CIRCLE_BRANCH = master ]; then git config user.email "andrewg010@gmail.com"; git config user.name "andrewghx" ; fi
+          command: if [ $CIRCLE_BRANCH = master ]; then git config user.email "andrewg010@gmail.com"; git config user.name "andrewghx" ; fi
       - deploy: 
           command: if [ $CIRCLE_BRANCH = master ]; then node node_modules/gh-pages/bin/gh-pages.js --dist out; fi
 workflows:
