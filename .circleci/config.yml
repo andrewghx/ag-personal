@@ -11,7 +11,7 @@ jobs:
           steps:
             - run: echo hi
       - deploy: 
-          command: if [ $CIRCLE_BRANCH = test-ci ]; then echo ernferkfn; fi
+          command: if [ $CIRCLE_BRANCH = master ]; then git config user.email "andrewg010@gmail.com"; git config user.name "andrewghx"; fi
 workflows:
     build-and-export:
       jobs:
