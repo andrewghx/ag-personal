@@ -5,11 +5,14 @@ jobs:
       - image: circleci/node@1.1.6
     steps:
       - checkout
-      - node/with-cache:
-        steps:
-          - run: npm install
-          - run: npm run build
-          - run: npm run export
+      - run: 
+        name: Install
+        command: npm install
+      - run: npm run build
+        name: Build
+      - run:
+        name: Export
+        command: npm run export
 workflows:
     build-and-export:
       jobs:
