@@ -8,10 +8,10 @@ jobs:
     steps:
       - checkout
       - node/with-cache:
-        steps:
-          - run: npm install
-          - run: npm run build
-          - run: npm run export
+          steps:
+            - run: npm install
+            - run: npm run build
+            - run: npm run export
 workflows:
     build-and-export:
       jobs:
