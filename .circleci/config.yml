@@ -11,7 +11,7 @@ jobs:
           steps:
             - run: echo hi
       - deploy: 
-          command: if [ $CIRCLE_BRANCH == "ci-config" ]; then echo hello; fi
+          command: echo $CIRCLE_BRANCH
 workflows:
     build-and-export:
       jobs:
