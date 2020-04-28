@@ -11,10 +11,10 @@
     "export": "next export",
     "thing": "ts-node -r tsconfig-paths/register --project tsconfig.server.json scripts/postBuild.ts"
   },
-  "author": { 
-    "name" : "Andrew Griffiths",
-    "email" : "codeandrewg@gmail.com",
-    "url" : "https://www.griffithsa.co.uk"
+  "author": {
+    "name": "Andrew Griffiths",
+    "email": "codeandrewg@gmail.com",
+    "url": "https://www.griffithsa.co.uk"
   },
   "license": "MIT",
   "dependencies": {
@@ -24,12 +24,11 @@
     "cross-env": "^7.0.2",
     "find-root": "^1.1.0",
     "gray-matter": "^4.0.2",
+    "html-styled-react-parser": "^1.0.1",
     "next": "^9.3.4",
     "next-fonts": "^1.1.0",
-    "node-html-parser": "^1.2.16",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
-    "react-html-parser": "^2.0.2",
     "sitemap": "^6.1.1",
     "styled-components": "^4.0.0"
   },
@@ -38,7 +37,6 @@
     "@types/find-root": "^1.1.1",
     "@types/node": "^13.11.0",
     "@types/react": "^16.9.32",
-    "@types/react-html-parser": "^2.0.1",
     "@types/styled-components": "^5.1.0",
     "@zeit/next-css": "^1.0.1",
     "babel-plugin-styled-components": "^1.8.0",

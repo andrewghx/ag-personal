@@ -1,8 +1,10 @@
-import HTMLToReactComponent from '~/components/content-parser/replacer'
+import Parser from 'html-styled-react-parser'
+import replacements from '~/config/content-parser/parser-replacements'
 
 interface Props {
-  html?: string
+  html: string
 }
-const ContentParser: React.FC<Props> = ({ html = '' }) => <>{HTMLToReactComponent(html)}</>
 
-export default ContentParser
+const ParserWrapper = (props: Props) => <Parser html={props.html} replacements={replacements} />
+
+export default ParserWrapper
