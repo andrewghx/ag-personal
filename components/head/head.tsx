@@ -1,6 +1,8 @@
 import Head from 'next/head'
 import defaults from '~/config/seo/meta-defaults'
 
+const assetPrefix = process.env.ASSET_PREFIX
+
 interface Props {
   title?: string
   description?: string
@@ -30,6 +32,16 @@ const PageHead: React.FC<Props> = ({ title = defaults.title, description = defau
     <meta name='twitter:image' content={img} />
 
     <meta name="google-site-verification" content="j_kyBcloP-5dKTFicDl3sa8Ehi7jK7HWtY0khpA79sI" />
+
+    {
+      process.env.NODE_ENV === 'production' && (
+        <>
+          <script async src="https://www.googletagmanager.com/gtag/js?id=UA-164780591-1"></script>
+          <script async src={`${assetPrefix}/js/google.js`}>
+          </script>
+        </>
+      )
+    }
   </Head>
 )
 
