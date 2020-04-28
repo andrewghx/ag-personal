@@ -28,6 +28,8 @@ const PageHead: React.FC<Props> = ({ title = defaults.title, description = defau
     <meta name='twitter:description' content={description} />
     <meta name='twitter:url' content={url} />
     <meta name='twitter:image' content={img} />
+
+    <meta name="google-site-verification" content="j_kyBcloP-5dKTFicDl3sa8Ehi7jK7HWtY0khpA79sI" />
   </Head>
 )
 
