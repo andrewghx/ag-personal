@@ -11,7 +11,7 @@ const settings: PageSettings = {
     metaUrl: `${getDomain()}`,
     titleText: 'Developer, Engineer, Enthusiast',
     headTitle: 'Andrew Griffiths - Web Developer, Software Engineer',
-    metaDescription: 'Page description',
+    metaDescription: 'Andrew Griffiths, web developer and software engineer in kent, UK. Personal website all about me.',
     metaOgImg: 'img/og.png',
     smallerTitle: false,
     sections: {
