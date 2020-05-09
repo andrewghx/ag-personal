@@ -14,7 +14,6 @@ const {
   laptopFromRight,
   characterFromLeft,
   characterWidth,
-  characterFromTop,
   titleTextFromLeft,
   titleTextFromTop,
   laptopWidth,
@@ -27,10 +26,10 @@ const TitleContainer = styled.header<Props>`
   position: relative;
   background: ${props => props.theme.colors.primary};
   color: ${props => props.theme.colors.light};
-  height: ${props => props.smaller ? `${height.smaller}${height.unit}` : `${height.xs}${height.unit}`};
   overflow: hidden;
+  min-height: ${props => props.smaller ? `${height.smaller}${height.unit}` : `${height.xs}${height.unit}`};
   @media (min-width: ${props => props.theme.breakpoints.smMin}) {
-    height: ${props => props.smaller ? `${(height.smaller || 0) * 1.1}${height.unit}` : `${height.default}${height.unit}`};
+    min-height: ${props => props.smaller ? `${(height.smaller || 0) * 1.1}${height.unit}` : `${height.default}${height.unit}`};
   }
 `
 
@@ -39,16 +38,16 @@ const TitleLaptop = styled(Laptop)<Props>`
   display: inline-block;
   position: absolute;
   left: ${props => props.smaller ? `calc(50% - ${(laptopWidth.smaller || 0) / 2}${laptopFromTop.unit})` : `35%` };
-  top: ${props => props.smaller ? `${laptopFromTop.smaller}${laptopFromTop.unit}` : `${(laptopFromTop.default || 0) * 4.5}${laptopFromTop.unit}`};
+  top: ${props => props.smaller ? `calc(50% - ${laptopWidth.smaller! / 3.4}${laptopWidth.unit})` : `calc(50% - ${laptopWidth.xs! / 6}${laptopWidth.unit})`};
   @media (min-width: ${props => props.theme.breakpoints.smMin}) {
     left: ${props => props.smaller ? `calc(100% - ${(laptopWidth.smaller || 0) + (laptopFromRight.smaller || 0)}${laptopFromRight.unit})` : `25%` };
     width: ${props => props.smaller ? `${laptopWidth.smaller}${laptopWidth.unit}` : `${(laptopWidth.sm || 0) * 0.9}${laptopWidth.unit}`};
-    top: ${props => props.smaller ? `${laptopFromTop.default}${laptopFromTop.unit}` : `${(laptopFromTop.sm || 0) * 4.5}${laptopFromTop.unit}`};
+    top: ${props => props.smaller ? `calc(50% - ${laptopWidth.smaller! / 3.4}${laptopWidth.unit})` : `calc(${laptopWidth.sm! / 10}${laptopWidth.unit})`};
   }
   @media (min-width: ${props => props.theme.breakpoints.mdMin}) {
     left: ${props => props.smaller ? `calc(100% - ${(laptopWidth.smaller || 0) + (laptopFromRight.smaller || 0)}${laptopFromRight.unit})` : `calc(100% - ${(laptopWidth.default || 0) + (laptopFromRight.default || 0)}${laptopFromRight.unit})` };
     width: ${props => props.smaller ? `${laptopWidth.smaller}${laptopWidth.unit}` : `${laptopWidth.default}${laptopWidth.unit}`};
-    top: ${`${laptopFromTop.default}${laptopFromTop.unit}`};
+    top: ${props => props.smaller ? `calc(50% - ${laptopWidth.smaller! / 3.4}${laptopWidth.unit})` : `calc(50% - ${laptopWidth.default! / 3.4}${laptopWidth.unit})`};
   }
 `
 
@@ -56,11 +55,12 @@ const TitleMe = styled(Me)<Props>`
   width: ${`${characterWidth.xs}${characterWidth.unit}`};
   display: ${props => props.smaller ? 'none': 'inline-block' };
   position: absolute;
-  top: ${`${characterFromTop.default}${characterFromTop.unit}`};
+  top: ${`calc(50% - ${characterWidth.xs! * 1.1}${characterWidth.unit})`};
   left: ${`${characterFromLeft.xs}${characterFromLeft.unit}`};
   @media (min-width: ${props => props.theme.breakpoints.smMin}) {
     width: ${`${characterWidth.default}${characterWidth.unit}`};
     left: ${`${characterFromLeft.sm}${characterFromLeft.unit}`};
+    top: ${`calc(50% - ${characterWidth.default! * 1.1}${characterWidth.unit})`};
   }
   @media (min-width: ${props => props.theme.breakpoints.mdMin}) {
     left: ${`${characterFromLeft.default}${characterFromLeft.unit}`};
@@ -74,30 +74,40 @@ const TitleText = styled.h1<Props>`
   margin: 0px;
   padding: 0px;
   color: ${props => props.theme.colors.light};
-  position: absolute;
+  position: relative;
   font-size: ${`${titleTextSize.xs}${titleTextSize.unit}`};
   top: ${props => props.smaller ? `${(height.smaller || 0) / 2}${titleTextFromTop.unit}` : `${titleTextFromTop.xs}${titleTextFromTop.unit}`};
   left: ${props => props.smaller ? '0px' : `${(titleTextFromLeft.xs || 0) * 1.05}${titleTextFromLeft.unit}`};
   text-shadow: 1px 2px 4px ${props => props.theme.boxShadowColor};
+  padding-bottom: ${props => props.smaller ? `${(height.smaller || 0) / 1.4}${titleTextFromTop.unit}` : `${titleTextFromTop.xs! * 1.3}${titleTextFromTop.unit}`}; 
+  max-width: ${props => props.smaller ? '100%' : '70%'};
   @media (min-width: ${props => props.theme.breakpoints.smMin}) {
     font-size: ${`${titleTextSize.sm}${titleTextSize.unit}`};
     top: ${props => props.smaller ? `${(height.smaller || 0) * 1.1 / 2 - ((titleTextSize.sm || 0) * 0.75 / 2)}${titleTextFromTop.unit}` : `${(titleTextFromTop.sm || 0) * 1.2}${titleTextFromTop.unit}`};
+    padding-bottom: ${props => props.smaller ? `${((height.smaller || 0) * 1.1 / 1.4) - ((titleTextSize.sm || 0) * 0.75 / 2)}${titleTextFromTop.unit}` : `${(titleTextFromTop.sm || 0) * 1.3}${titleTextFromTop.unit}`};
     left: ${props => props.smaller ? '0px' : `${(titleTextFromLeft.sm || 0) * 1.2}${titleTextFromLeft.unit}`};
+    max-width: ${props => props.smaller ? '100%' : '65%'};
   }
   @media (min-width: ${props => props.theme.breakpoints.mdMin}) {
     font-size: ${`${titleTextSize.md}${titleTextSize.unit}`};
     top: ${props => props.smaller ? `${((height.smaller || 0) * 1.1 / 2) - ((titleTextSize.md || 0) * 0.75 / 2)}${titleTextFromTop.unit}` : `${titleTextFromTop.md}${titleTextFromTop.unit}`};
+    padding-bottom: ${props => props.smaller ? `${((height.smaller || 0) * 1.1 / 1.4) - ((titleTextSize.md || 0) * 0.75 / 2)}${titleTextFromTop.unit}` : `${titleTextFromTop.md! * 1.3}${titleTextFromTop.unit}`};
     left: ${props => props.smaller ? '0px' : `${titleTextFromLeft.md}${titleTextFromLeft.unit}`};
+    max-width: ${props => props.smaller ? '100%' : '69%'};
   }
   @media (min-width: ${props => props.theme.breakpoints.lgMin}) {
     font-size: ${`${titleTextSize.lg}${titleTextSize.unit}`};
     top: ${props => props.smaller ? `${((height.smaller || 0) * 1.1 / 2) - ((titleTextSize.lg || 0) * 0.75 / 2)}${titleTextFromTop.unit}` : `${titleTextFromTop.lg}${titleTextFromTop.unit}`};
+    padding-bottom: ${props => props.smaller ? `${((height.smaller || 0) * 1.1 / 1.4) - ((titleTextSize.lg || 0) * 0.75 / 2)}${titleTextFromTop.unit}` : `${titleTextFromTop.lg! * 1.3}${titleTextFromTop.unit}`};
     left: ${props => props.smaller ? '0px' : `${(titleTextFromLeft.lg || 0) * 1.1}${titleTextFromLeft.unit}`};
+    max-width: ${props => props.smaller ? '100%' : '73%'};
   }
   @media (min-width: ${props => props.theme.breakpoints.xlMin}) {
     font-size: ${`${titleTextSize.xl}${titleTextSize.unit}`};
     top: ${props => props.smaller ? `${((height.smaller || 0) * 1.1 / 2) - ((titleTextSize.xl || 0) * 0.75 / 2)}${titleTextFromTop.unit}` : `${titleTextFromTop.xl}${titleTextFromTop.unit}`};
+    padding-bottom: ${props => props.smaller ? `${((height.smaller || 0) * 1.1 / 1.4) - ((titleTextSize.xl || 0) * 0.75 / 2)}${titleTextFromTop.unit}` : `${titleTextFromTop.xl! * 1.3}${titleTextFromTop.unit}`};
     left: ${props => props.smaller ? '0px' : `${(titleTextFromLeft.xl || 0) * 1.2}${titleTextFromLeft.unit}`};
+    max-width: ${props => props.smaller ? '100%' : '80%'};
   }
 `
 

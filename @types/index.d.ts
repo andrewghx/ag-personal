@@ -9,6 +9,7 @@ export interface PageProps {
   smallerTitle: boolean
   contentHeading?: string
   sections?: any
+  html?: string
 }
 
 export interface PageSettings {
