@@ -9,5 +9,5 @@ metaDescription: A microservice behaving as an API to set and maintain alert mes
 <h2>What technologies did I use?</h2>
 <p>Hello</p>
 
-<h2>What did I learn?</h2>
+<h2>What did I learn? </h2>
 <p>Haha</p>
