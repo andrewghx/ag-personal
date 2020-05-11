@@ -6,6 +6,7 @@ import Container from '~/components/common-styled-elements/container'
 import Anchor from '~/components/common-styled-elements/anchor'
 import Link from '~/components/link'
 import Footer from '~/components/footer/footer'
+import Head from '~/components/head/head'
 
 const ErrorPageContainer = styled(Container)`
   padding: 3rem 0rem;
@@ -18,8 +19,9 @@ const ErrorText = styled(Heading)`
   width: 100%;
 `
 
-const ErrorPage = ({ titleText, smallerTitle }: PageProps) => (
+const ErrorPage = ({ titleText, smallerTitle, headTitle }: PageProps) => (
   <>
+    <Head title={headTitle}/>
     <Title titleText={titleText} smaller={smallerTitle} />
     <ErrorPageContainer>
       <ErrorText as='h2'>Oops! Looks like you were looking for a page that doesn't exist.</ErrorText>
@@ -45,6 +47,7 @@ export async function getStaticProps() {
     props: {
       page: 'error',
       titleText: 'That isn\'t here ☹️',
+      headTitle: 'That isn\'t here ☹️',
       smallerTitle: false
     }
   }

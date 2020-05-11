@@ -23,6 +23,7 @@
     "@fortawesome/react-fontawesome": "^0.1.9",
     "cross-env": "^7.0.2",
     "find-root": "^1.1.0",
+    "glob": "^7.1.6",
     "gray-matter": "^4.0.2",
     "html-styled-react-parser": "^1.0.1",
     "next": "^9.3.4",
@@ -36,6 +37,7 @@
   "devDependencies": {
     "@fortawesome/free-brands-svg-icons": "^5.13.0",
     "@types/find-root": "^1.1.1",
+    "@types/glob": "^7.1.1",
     "@types/node": "^13.11.0",
     "@types/react": "^16.9.32",
     "@types/styled-components": "^5.1.0",

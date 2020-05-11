@@ -17,8 +17,10 @@ const settings: ProjectSettings = {
       <li>Working with configuring and deploying to cloud services (Amazon, Google)</li>
       <li>Developing and maintaining single page apps with React</li>
       <li>Working with microservice architectures using Express and SQL</li>
-      <li>Building and maintaining REST and GraphQL APIs</li>
+      <li>Building and maintaining REST and GraphQL backend APIs</li>
       <li>Contributing to SEO through optimising page speed and content</li>
+      <li>Working with Git and github</li>
+      <li>Writing tests using libraries such as Jest, Mocha and Enzyme</li>
     </ul>
   `,
   svgUrl: 'img/svg/portfolio.svg',

@@ -22,17 +22,3 @@ const PostPage = ({ titleText, smallerTitle, headTitle, metaDescription, metaOgI
 )
 
 export default PostPage
-
-export async function getStaticProps() {
-  return {
-    props: {
-      page: '',
-      metaUrl: ``,
-      titleText: 'A post has been made',
-      metaDescription: '',
-      metaOgImg: '',
-      smallerTitle: true,
-      html: ''
-    } 
-  }
-}
