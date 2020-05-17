@@ -4,6 +4,7 @@ import introduction from '~/config/pages/homepage/introduction'
 import about from '~/config/pages/homepage/about'
 import projects from '~/config/pages/homepage/projects'
 import contact from '~/config/pages/homepage/contact'
+import assetPrefix from '~/config/assetPrefix'
 
 const settings: PageSettings = {
   props: {
@@ -12,7 +13,7 @@ const settings: PageSettings = {
     titleText: 'Developer, Engineer, Enthusiast',
     headTitle: 'Andrew Griffiths - Web Developer, Software Engineer',
     metaDescription: 'Andrew Griffiths, web developer and software engineer in kent, UK. Personal website all about me.',
-    metaOgImg: 'img/og.png',
+    metaOgImg: `${assetPrefix}/img/og.png`,
     smallerTitle: false,
     sections: {
       introduction,

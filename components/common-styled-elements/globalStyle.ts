@@ -1,6 +1,5 @@
 import { createGlobalStyle } from 'styled-components'
-
-const assetPrefix = process.env.ASSET_PREFIX
+import assetPrefix from '~/config/assetPrefix'
 
 const GlobalStyle = createGlobalStyle`
   @font-face {

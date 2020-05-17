@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import Image from '~/components/common-styled-elements/image'
 import meHead from '~/config/svg/meHead'
-const assetPrefix = process.env.ASSET_PREFIX
+import assetPrefix from '~/config/assetPrefix'
 
 interface Props {
   inline?: boolean,

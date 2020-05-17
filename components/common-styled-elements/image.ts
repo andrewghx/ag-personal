@@ -5,6 +5,7 @@ interface Props extends ThemeProps<any> {
   fillContainer?: boolean
   src?: string
   alt?: string
+  srcset?: string
 }
 
 const Image = styled.img<Props>`

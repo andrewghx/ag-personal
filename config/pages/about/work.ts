@@ -49,7 +49,7 @@ const settings: WorkSettings = {
         {
           title: 'Store Manager',
           dates: 'September 2014 - August 2017',
-          copy: '<p>Full responsibility for the running of a food store. Ultimately responsible for satisfying the requirements for availability of products, effective profit and loss, minimising costs and delivery of excellent customer service.</p><p>In this roll I was fully responsible for dealing with payroll and HR matters arising in store, ensuring legal compliance, managing the schedules for the team and most importantly coaching and guiding my team to deliver what was required to get the products to the customer.</p>'
+          copy: '<p>Full responsibility for the running of a food store. Ultimately responsible for satisfying the requirements for availability of products, effective profit and loss, minimising costs and delivery of excellent customer service.</p><p>In this role I was fully responsible for dealing with payroll and HR matters arising in store, ensuring legal compliance, managing the schedules for the team and most importantly coaching and guiding my team to deliver what was required to get the products to the customer.</p>'
         },
         {
           title: 'Team Manager',

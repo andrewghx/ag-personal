@@ -1,6 +1,5 @@
 import NextLink from 'next/link'
-
-const assetPrefix = process.env.ASSET_PREFIX
+import assetPrefix from '~/config/assetPrefix'
 
 interface Props {
   [key: string]: any

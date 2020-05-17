@@ -1,5 +1,5 @@
 import Head from 'next/head'
-const assetPrefix = process.env.ASSET_PREFIX
+import assetPrefix from '~/config/assetPrefix'
 
 const Favicons = () => (
   <Head>

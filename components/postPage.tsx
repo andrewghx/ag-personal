@@ -8,6 +8,14 @@ import styled from 'styled-components'
 
 const PageContainer = styled(Container)`
   padding: 2rem 0rem;
+  div.image-container {
+    margin: auto;
+    max-width: 1200px;
+  }
+  div.video-container {
+    margin: auto;
+    max-width: 1200px;
+  }
 `
 
 const PostPage = ({ titleText, smallerTitle, headTitle, metaDescription, metaOgImg, html = '' }: PageProps) => (

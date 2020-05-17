@@ -4,8 +4,8 @@ import Heading from '~/components/common-styled-elements/heading'
 import { ProjectSettings } from '~/config/pages/homepage/projects'
 import Image from '~/components/common-styled-elements/image'
 import ContentParser from '~/components/content-parser/contentParser'
-// import Button from '~/components/common-styled-elements/button'
-// import Link from '~/components/link'
+import Button from '~/components/common-styled-elements/button'
+import Link from '~/components/link'
 
 const Section = styled(Container)`
   padding-top: 3rem;
@@ -43,13 +43,13 @@ const CopySection = styled.div`
   }
 `
 
-const ProjectSection: React.FC<ProjectSettings> = ({ titleText, svgUrl, svgAlt, copy }) => (
+const ProjectSection: React.FC<ProjectSettings> = ({ linkText, linkUrl, titleText, svgUrl, svgAlt, copy }) => (
   <Section id='projects' as='section'>
     <LinkSection>
       <Image src={svgUrl} alt={svgAlt} />
-      {/* <Link href={linkUrl}>
+      <Link href={linkUrl}>
         <Button as='a' larger>{linkText}</Button>
-      </Link> */}
+      </Link> 
     </LinkSection>
     <CopySection>
       <Heading>{titleText}</Heading>

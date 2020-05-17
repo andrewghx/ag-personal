@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import Image from '~/components/common-styled-elements/image'
 import theme from '~/config/theme'
 import me from '~/config/svg/meSvg'
-const assetPrefix = process.env.ASSET_PREFIX
+import assetPrefix from '~/config/assetPrefix'
 
 interface Props {
   inline?: boolean,

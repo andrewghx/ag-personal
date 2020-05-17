@@ -1,7 +1,6 @@
 import Head from 'next/head'
 import defaults from '~/config/seo/meta-defaults'
-
-const assetPrefix = process.env.ASSET_PREFIX
+import assetPrefix from '~/config/assetPrefix'
 
 interface Props {
   title?: string

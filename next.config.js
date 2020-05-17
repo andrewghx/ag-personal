@@ -10,7 +10,7 @@ module.exports = withFonts(withCSS({
     config.resolve.alias['~'] = path.resolve(__dirname)
     config.plugins.push(
       new webpack.DefinePlugin({
-        'process.env.ASSET_PREFIX': JSON.stringify(assetPrefix),
+        [`process.env.ASSET_PREFIX`] : JSON.stringify(assetPrefix),
       }),
     )
     return config

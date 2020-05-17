@@ -1,3 +1,5 @@
+import assetPrefix from "~/config/assetPrefix"
+
 export interface ProjectSettings {
   titleText: string
   svgUrl: string
@@ -13,7 +15,7 @@ const settings: ProjectSettings = {
   <p>I\'ve worked on a range of stuff including:</p>
     <ul>
       <li>Working with and developing static site generators</li>
-      <li>Contributing to continuous integration</li>
+      <li>Contributing to continuous integration techniques and processes</li>
       <li>Working with configuring and deploying to cloud services (Amazon, Google)</li>
       <li>Developing and maintaining single page apps with React</li>
       <li>Working with microservice architectures using Express and SQL</li>
@@ -23,10 +25,10 @@ const settings: ProjectSettings = {
       <li>Writing tests using libraries such as Jest, Mocha and Enzyme</li>
     </ul>
   `,
-  svgUrl: 'img/svg/portfolio.svg',
+  svgUrl: `${assetPrefix}/img/svg/portfolio.svg`,
   svgAlt: 'Image of projects in a folder',
   linkText: 'See example projects',
-  linkUrl: '/projects'
+  linkUrl: '/project'
 }
 
 export default settings

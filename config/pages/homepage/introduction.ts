@@ -1,3 +1,5 @@
+import assetPrefix from '~/config/assetPrefix'
+
 export interface Role {
   img: string
   title: string
@@ -13,14 +15,14 @@ const settings: IntroductionSettings = {
   titleText: 'Hi! I\'m Andrew, I\'m a...',
   roles: [
     {
-      img: 'img/svg/developer.svg',
+      img: `${assetPrefix}/img/svg/developer.svg`,
       title: 'Web Developer',
-      body: 'Designing and building modern, responsive, optimised and intuitive websites since school days'
+      body: 'Designing and building modern, responsive, optimised and intuitive websites since my childhood'
     },
     {
-      img: 'img/svg/engineer.svg',
+      img: `${assetPrefix}/img/svg/engineer.svg`,
       title: 'Software Engineer',
-      body: 'Designing, implementing and maintaining full stack web apps for a living'
+      body: 'Designing, implementing and maintaining full stack web apps and their infrastructure for a living'
     }
   ]
 }

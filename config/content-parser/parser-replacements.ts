@@ -4,6 +4,7 @@ import Button from '~/components/common-styled-elements/button'
 import Heading from '~/components/common-styled-elements/heading'
 import HorizontalRuler from '~/components/common-styled-elements/horizontalRuler'
 import Image from '~/components/image'
+import Video from '~/components/video'
 import List from '~/components/common-styled-elements/list'
 import ListItem from '~/components/common-styled-elements/listItem'
 import Paragraph from '~/components/common-styled-elements/paragraph'
@@ -33,6 +34,7 @@ const replacements: ParserReplacements = {
   panel: Panel,
   pbody: PanelBody,
   pheading: PanelHeading,
+  video: Video
 }
 
 export default replacements
