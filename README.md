@@ -1,4 +1,3 @@
 # Portfolio website
 
-Here is the readme :) 
-
+To do 
