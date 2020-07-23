@@ -1,7 +1,7 @@
 {
   "name": "ag-personal",
   "version": "1.0.0",
-  "description": "Andrew Griffiths Personal Website",
+  "description": "Andrew Griffiths Personal Portfolio Website",
   "main": "index.js",
   "scripts": {
     "test": "test",
