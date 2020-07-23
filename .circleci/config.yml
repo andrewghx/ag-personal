@@ -9,12 +9,10 @@ jobs:
       name: node/default
     steps:
       - checkout
-      - node:
-          steps:
-            - run: npm install
-            - run: npm install gh-pages
-            - run: npm run build
-            - run: npm run export
+      - run: npm install
+      - run: npm install gh-pages
+      - run: npm run build
+      - run: npm run export
       - deploy: 
           command: if [ $CIRCLE_BRANCH = master ]; then git config user.email "ci-build@griffithsa.co.uk"; git config user.name "ci-build" ; fi
       - deploy:
