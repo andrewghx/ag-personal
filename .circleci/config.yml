@@ -9,7 +9,7 @@ jobs:
       name: node/default
     steps:
       - checkout
-      - node/with-cache:
+      - node:
           steps:
             - run: npm install
             - run: npm install gh-pages
