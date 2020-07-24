@@ -35,17 +35,17 @@
     "@types/glob": "^7.1.1"
   },
   "devDependencies": {
-    "@fortawesome/free-brands-svg-icons": "^5.13.0",
-    "@types/find-root": "^1.1.1",
-    "@types/node": "^13.11.0",
-    "@types/react": "^16.9.32",
-    "@types/styled-components": "^5.1.0",
-    "@zeit/next-css": "^1.0.1",
-    "babel-plugin-styled-components": "^1.8.0",
-    "nodemon": "^2.0.3",
-    "ts-node": "^8.8.2",
-    "tsconfig-paths": "^3.9.0",
-    "typescript": "^3.8.3"
+    "@fortawesome/free-brands-svg-icons": "5.13.0",
+    "@types/find-root": "1.1.1",
+    "@types/node": "13.13.1",
+    "@types/react": "16.9.34",
+    "@types/styled-components": "5.1.0",
+    "@zeit/next-css": "1.0.1",
+    "babel-plugin-styled-components": "1.10.7",
+    "nodemon": "2.0.3",
+    "ts-node": "8.9.0",
+    "tsconfig-paths": "3.9.0",
+    "typescript": "3.8.3"
   },
   "repository": {
     "type": "git",
