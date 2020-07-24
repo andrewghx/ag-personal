@@ -31,7 +31,7 @@
     "react-dom": "^16.13.1",
     "react-intersection-observer": "^8.26.2",
     "sitemap": "^6.1.1",
-    "styled-components": "^4.0.0",
+    "styled-components": "^5.0.0",
     "@types/glob": "^7.1.1"
   },
   "devDependencies": {
@@ -39,7 +39,7 @@
     "@types/find-root": "1.1.1",
     "@types/node": "13.13.1",
     "@types/react": "16.9.34",
-    "@types/styled-components": "5.1.0",
+    "@types/styled-components": "5.1.1",
     "@zeit/next-css": "1.0.1",
     "babel-plugin-styled-components": "1.10.7",
     "nodemon": "2.0.3",
