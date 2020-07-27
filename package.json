@@ -43,7 +43,7 @@
     "@zeit/next-css": "1.0.1",
     "babel-plugin-styled-components": "1.10.7",
     "nodemon": "2.0.3",
-    "ts-node": "8.9.0",
+    "ts-node": "8.10.2",
     "tsconfig-paths": "3.9.0",
     "typescript": "3.9.7"
   },
