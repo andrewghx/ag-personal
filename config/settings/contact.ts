@@ -23,7 +23,7 @@ const contactSettings = {
     {
       img: faGithub,
       name: 'Github',
-      href: 'https://www.github.com/andrewghx'
+      href: 'https://www.github.com/andrewg010'
     },
     {
       img: faLinkedin,
