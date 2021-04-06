@@ -24,7 +24,7 @@ interface Props {
 
 const Footer: React.FC<Props> = ({ central }) => (
   <FooterContainer central={central}>
-    <p>© 2020 Andrew Griffiths</p>
+    <p>© {`${new Date().getUTCFullYear()}`} Andrew Griffiths</p>
     <span><SocialIcons /></span>
   </FooterContainer>
 )

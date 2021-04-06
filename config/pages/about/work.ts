@@ -19,12 +19,40 @@ const settings: WorkSettings = {
   titleText: 'My work experience',
   jobs: [
     {
+      name: 'Feedr',
+      location: 'London, UK',
+      roles: [
+        {
+          title: 'Full Stack Developer',
+          dates: 'September 2019 - Current',
+          copy: `<p>Working on full stack React / Node / Typescript / ReactNative stack with PostgreSQL and MongoDB.</p>
+          <p>Projects of note</p>
+          <p>Helping to break a monolith into separate services by building a new service to handle loyalty and promotions</p>
+          <p>Building a new promotions centre UI to allow promotions to be created and edited</p>
+          <p>Migration of users from separate tables in SQL db to a single table with roles and permissions attached</p>`
+        }
+      ]
+    },
+    {
+      name: 'Supersolid',
+      location: 'London, UK',
+      roles: [
+        {
+          title: 'Server Developer',
+          dates: 'June 2019 - September 2019',
+          copy: `<p>Worked on NodeJS servers for free to play mobile games.</p>
+          <p>Deploying to kubernetes I worked with strict Typescript to help build real time game servers for a new title - this included server side physics calculations.</p>
+          <p>Optimum memory and computational performance in Node was highly important.</p>`
+        }
+      ]
+    },
+    {
       name: 'Holiday Extras',
       location: 'Hythe, UK',
       roles: [
         {
           title: 'Software Engineer',
-          dates: 'March 2019 - Current',
+          dates: 'March 2019 - June 2019',
           copy: `<p>Working as part of an agile team. We write our tech in Javascript. We work in a microservice infrastructure and my responsibilities involve maintaining the various services that provide data to the static pages that drive bookings.</p>
           <p>Our frontend pages are written in React with our back ends primarily Expressjs. I have been a major contributer to an in house static site generator as well as surrounding technology.</p>
           <p>We use a combination of cloud services to implement our CI and service infrastructure and I have got my hands dirty with all of it including deploying to S3 and dealing with cache, dealing with SQL and Redis, passport authentication and deployment to Kubernetes clusters.</p>`

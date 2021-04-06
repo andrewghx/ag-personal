@@ -48,7 +48,15 @@ const settings: SkillSettings = {
       competency: 20
     },
     {
-      name: 'SQL',
+      name: 'MySQL',
+      competency: 20
+    },
+    {
+      name: 'PostgreSQL',
+      competency: 20
+    },
+    {
+      name: 'MongoDB',
       competency: 20
     },
     {
@@ -68,7 +76,7 @@ const settings: SkillSettings = {
       competency: 20
     },
     {
-      name: 'SSG',
+      name: 'Static site generators',
       competency: 20
     },
     {
